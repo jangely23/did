@@ -13,13 +13,13 @@
     <main>
         <section  class="resumen">
             <?php
-            include ("./../acciones/consultaResumen.php");
+            include ("../acciones/consultaResumen.php");
             ?>
         </section>
 
         <section class="general">
             <?php
-            include ("./../acciones/consultaGeneral.php");
+            include ("../acciones/consultaGeneral.php");
             ?>
         </section>
     </main>

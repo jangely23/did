@@ -1,285 +1,328 @@
-*{
+* {
     padding: 0;
     margin: 0;
 }
 
+:root {
+    --main-bg-color: #B0CFF4;
+    --textmain-bg-color: black;
+    --shadow-bg-color: #6885A8;
+}
+
+
 /* Para encabezado - menú */
-header{
+
+header {
     background-color: #ffffff;
     width: 100%;
-    left: 0; /* Posicionamos la cabecera al lado izquierdo */
-    top: 0; /* Posicionamos la cabecera pegada arriba */
-    position: fixed; /* Hacemos que la cabecera tenga una posición*/
+    left: 0;
+    /* Posicionamos la cabecera al lado izquierdo */
+    top: 0;
+    /* Posicionamos la cabecera pegada arriba */
+    position: fixed;
+    /* Hacemos que la cabecera tenga una posición*/
     z-index: 901;
     font: 16px normal Tahoma, helvetica;
 }
 
-.topnav{
+.topnav {
     position: relative;
     padding: 5px 5px 5px 15px;
-    box-shadow:  0px 0px 5px #909090;
+    box-shadow: 0px 0px 8px var(--shadow-bg-color);
 }
-.topnav a{
+
+.topnav a {
     float: right;
     display: block;
     padding: 30px;
     color: #000000;
     text-align: center;
     text-decoration: none;
-
 }
-.topnav a:visited{
+
+.topnav a:visited {
     text-decoration: none;
     color: #023636;
 }
-.topnav a:hover{
-    background-color: #00E0FF;
-    color: #000000;
+
+.topnav a:hover {
+    background-color: var(--main-bg-color);
+    color: var(--textmain-bg-color);
 }
 
 .topnav .icon {
     display: none;
-  }
+}
 
-/*media queries para el nav Menu*/ 
+
+/*media queries para el nav Menu*/
+
 @media screen and (max-width: 600px) {
-    .topnav a:not(:first-child) {display: none;}
-    .topnav a.icon {
-      float: right;
-      display: block;
+    .topnav a:not(:first-child) {
+        display: none;
     }
-  }
+    .topnav a.icon {
+        float: right;
+        display: block;
+    }
+    table {
+        display: block;
+        overflow-x: auto;
+    }
+}
 
 @media screen and (max-width: 600px) {
-    .topnav.responsive {position: relative;}
+    .topnav.responsive {
+        position: relative;
+    }
     .topnav.responsive a.icon {
-      position: absolute;
-      right: 0;
-      top: 0;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
     .topnav.responsive a {
-      float: none;
-      display: block;
-      text-align: left;
+        float: none;
+        display: block;
+        text-align: left;
     }
-  }  
+}
 
-img{
+img {
     padding: 20px;
 }
 
+
 /* Para el main contenedor principal*/
-main{
-  position:absolute;
-  float: center;
-  text-align: center;
-  height: 100%;
-  width: 100%;
-  padding: 5px;
-  margin: 5px;
-  background-color: rgba(1, 38, 53, 0);
-  display: block;
-  text-align: center;
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around safe;
+    height: 100%;
+    width: 100%;
+    padding: 5px;
+    margin: 5px;
 }
 
-section{
-  display: inline-block;
-  position: relative;
-}
-.resumen{
-  display: inline;
-  position: relative;
-  text-align: center;
-  margin: 0 auto;
-  float: center;
-  height: 40%;
+section {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center safe;
+    align-content: center;
+    width: 30%;
+    margin: 5px;
 }
 
-.general{
-  display: block;
-  position: relative;
-  text-align: center;
-  border-radius: 5px;
-  margin: 0 auto;
+.resumen {
+    display: flex;
+    text-align: center;
+    height: auto;
+    width: auto;
+    justify-content: space-around safe;
+    flex-direction: row;
+    align-items: stretch;
+    align-content: center;
+    order: 1;
 }
+
+.general {
+    text-align: center;
+    border-radius: 5px;
+    color: rgb(63, 63, 63);
+    width: auto;
+    order: 2;
+}
+
+
 /*para los div internos*/
+
 .general div {
-  padding-top: 10px;
-  border-radius: 5px;
-  float: center;
-  background-color:white;
-  width: 92%;
-  margin-left: auto;
-  margin-right: auto;
+    padding-top: 10px;
+    border-radius: 5px;
+    background-color: white;
+    width: auto;
+    flex-basis: min-content;
+    box-shadow: 0px 0px 3px var(--shadow-bg-color);
+    margin: 5px;
 }
 
-.resumen div{
-  background-color: white;
-  height: 26%;
-  width: 15%;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 10px;
-  display: inline-flex;
-  border-radius: 6px;
-  margin:16px;
-  box-shadow:  0px 0px 3px #909090;
+.resumen div {
+    background-color: white;
+    box-shadow: 0px 0px 3px var(--shadow-bg-color);
+    flex-basis: max-content;
+    width: auto;
+    margin: 5px;
 }
+
 
 /* Para las tablas */
-caption{
-  border: 2px black solid;
-  font: 18px normal Tahoma, helvetica;
-  background-color:  #60eafc;
-  padding: 5px;
-  border: 0px solid;
-  margin: 5px;
+
+caption {
+    border: 2px black solid;
+    font: 18px normal Tahoma, helvetica;
+    background-color: var(--main-bg-color);
+    padding: 5px;
+    border: 0px solid;
+    margin: 5px;
+    color: var(--textmain-bg-color);
 }
 
-.resumen div table{
-  align-items: center;
-  flex-direction: row;
-  flex-basis: auto;
-  justify-content: space-around;
+.resumen div table {
+    align-items: center;
+    flex-direction: row;
+    flex-basis: auto;
+    justify-content: space-around;
 }
 
-.resumen div caption{
-  align-items: center;
-  flex-direction: row;
-  flex-basis: auto;
-  justify-content: space-around;
+.resumen div caption {
+    align-items: center;
+    flex-direction: row;
+    flex-basis: auto;
+    justify-content: space-around;
 }
 
-table{
-  font: 16px bold Tahoma, helvetica;
-  overflow: scroll;
-  text-align: center;
-  padding: 5px;
-  margin: 5px;
-  background-color: white;
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
-  width: 99%;
+table {
+    font: 14px bold Tahoma, helvetica;
+    overflow: scroll;
+    text-align: center;
+    padding: 8px;
+    margin: 5px;
+    background-color: white;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    width: auto;
 }
 
 th {
-  padding: 4px;
-  background-color:  #60eafc;
-  text-align: center;
+    padding: 4px;
+    background-color: #D1E6FF;
+    text-align: center;
 }
+
 td {
-  margin: 5px;
-  text-align: center;
+    margin: 5px;
+    text-align: center;
 }
+
 
 /* Para los botones */
-.button_editar{
-  background-color: rgb(250, 175, 77);
-  padding: 3px 5px 3px 5px;
-  border-radius:15px;
-  border: 0px solid;
-  width: 30%;
-  margin: 3px;
+
+.button_editar {
+    background-color: #F5DDB0;
+    padding: 3px 5px 3px 5px;
+    border-radius: 15px;
+    border: 0px solid;
+    width: 30%;
+    margin: 3px;
 }
 
-.button_eliminar{
-  background-color: salmon;
-  padding: 3px 5px 3px 5px;
-  border-radius:15px;
-  border: 0px solid;
-  width: 30%;
-  margin: 3px;
+.button_eliminar {
+    background-color: #A88C58;
+    padding: 3px 5px 3px 5px;
+    border-radius: 15px;
+    border: 0px solid;
+    width: 30%;
+    margin: 3px;
+    color: #ffffff;
 }
 
-.button_crear{
-  background-color: lightgreen;
-  padding: 8px;
-  border-radius:15px;
-  font: 14px normal helvetica,Tahoma;
-  position: relative;
-  border: 0px solid;
-  width: 30%;
+.button_crear {
+    background-color: #B0CFF4;
+    padding: 8px;
+    border-radius: 15px;
+    font: 14px normal helvetica, Tahoma;
+    position: relative;
+    border: 0px solid;
+    width: 30%;
 }
 
-.button_guardar{
-  background-color: lightgreen;
-  padding: 8px;
-  border-radius:15px;
-  font: 14px normal helvetica,Tahoma;
-  position: relative;
-  border: 0px solid;
-  width: 30%;
+.button_guardar {
+    background-color: #D1E6FF;
+    padding: 8px;
+    border-radius: 15px;
+    font: 14px normal helvetica, Tahoma;
+    position: relative;
+    border: 0px solid;
+    width: 30%;
 }
 
-.button_regresar{
-  background-color: #60eafc;
-  padding: 8px;
-  border-radius:15px;
-  font: 14px normal helvetica,Tahoma;
-  position: relative;
-  border: 0px solid;
-  width: 30%;
+.button_regresar {
+    background-color: #D1E6FF;
+    padding: 8px;
+    border-radius: 15px;
+    font: 14px normal helvetica, Tahoma;
+    position: relative;
+    border: 0px solid;
+    width: 30%;
 }
+
 
 /*para los formularios*/
 
-form{
-  font: 14px normal helvetica,Tahoma;
-  background-color: white;
-  margin-top: 10px;
-  padding: 10px;
+form {
+    font: 14px normal helvetica, Tahoma;
+    background-color: white;
+    margin-top: 10px;
+    padding: 10px;
 }
 
-form div{
-  background-color: white; 
-  display: block; 
-  padding: 5px;
-  width: auto;
-}
-form span{
-	color:red;
-	padding-left:2px
+form div {
+    background-color: white;
+    display: block;
+    padding: 5px;
+    width: auto;
 }
 
-input[type=text],[type=email],[type=number],select{
-	width: 30%;
-	height: 25px;
-  font: 14px normal helvetica, Tahoma;
-  background-color: rgba(1, 38, 53, 0.027);
-	border-bottom: 2px solid  #60eafc;
-	border-width: 0px 0px 2px 0px;
-	padding: auto;
+form span {
+    color: red;
+    padding-left: 2px
 }
 
-select{
-  -moz-appearance: none;
- 
+input[type=text],
+[type=email],
+[type=number],
+select {
+    width: 30%;
+    height: 25px;
+    font: 14px normal helvetica, Tahoma;
+    background-color: rgba(1, 38, 53, 0.027);
+    border-bottom: 2px solid var(--main-bg-color);
+    border-width: 0px 0px 2px 0px;
+    padding: auto;
 }
 
-textarea{
-  width: 30%;
-  height: 10%;
-  font: 14px normal helvetica, Tahoma;
-  background-color: rgba(1, 38, 53, 0.027);
-  border-bottom: 2px solid  #60eafc;
-  border-width: 0px 0px 2px 0px;
+select {
+    -moz-appearance: none;
 }
-label{
-  position: relative;
-  width: 10%;
-  height: 25px;
-  font: 15px normal helvetica, Tahoma;
+
+textarea {
+    width: 30%;
+    height: 10%;
+    font: 14px normal helvetica, Tahoma;
+    background-color: rgba(1, 38, 53, 0.027);
+    border-bottom: 2px solid var(--main-bg-color);
+    border-width: 0px 0px 2px 0px;
+}
+
+label {
+    position: relative;
+    width: 10%;
+    height: 25px;
+    font: 15px normal helvetica, Tahoma;
 }
 
 
 /*para pie de pagina*/
-footer{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  text-align: center;
-  width: 100%;
-  background-color: #ffffff;
-  font-size: small;
-  border: 2px solid rgba(1, 38, 53, 0.2)
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: #ffffff;
+    font-size: small;
+    border: 2px solid rgba(1, 38, 53, 0.2)
 }

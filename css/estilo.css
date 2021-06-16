@@ -1,171 +1,189 @@
-*{
-	padding: 0;
-	margin: 0;
-}
-body{
-	background: white;
+* {
+    padding: 0;
+    margin: 0;
 }
 
-header{
-	box-shadow: 0px 3px 0px gold;
-	overflow: hidden;
-	width: 100%;
-	position: fixed;
-	background: white;
-	z-index: 100;
-}
-main{
-	padding-top: 80px;
-}
-nav a{
-	float: right;
-	display: block;
-	color: black;
-	text-align: right;
-	padding: 14px 26px;
-	text-decoration: none;
-	font: 14px normal helvetica,Tahoma;
-}
-nav a:visited{
-	text-decoration: none;
-	color: #FFAE00;
-}
-nav a:hover{
-	background-color: black;
-	color: white;
-}
-img{
-	float: left;
-	padding: 5px 16px;
+body {
+    background: white;
 }
 
-.select{
-	color: grey;
-
-}
-.formulario{
-	position:relative;
-	width:380px;
-	height:auto;
-	padding-left:10px;
-	padding-top:10px;
-	border-radius:20px;
-	border: solid gold 5px;
-	margin:auto;
+header {
+    box-shadow: 0px 3px 0px gold;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+    background: white;
+    z-index: 100;
 }
 
-.formulario-campo{
-	position:relative;
-	margin:auto;
-	padding-left:5px;
-	padding-top:5px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	font: 14px normal helvetica, Tahoma;
+main {
+    padding-top: 80px;
 }
 
-.obligatorio{
-	color:red;
-	padding-left:2px
-}
-input[type=text],[type=email],[type=number],.select{
-	width: 350px;
-	height: 25px;
-	font: 14px normal helvetica, Tahoma;
-	border-bottom: 2px solid gold;
-	border-width: 0px 0px 2px 0px;
-	padding: auto;
+nav a {
+    float: right;
+    display: block;
+    color: black;
+    text-align: right;
+    padding: 14px 26px;
+    text-decoration: none;
+    font: 14px normal helvetica, Tahoma;
 }
 
-textarea{
-	width:350px;
-	height:70px;
-	border: 2px solid gold;
-	font: 14px normal helvetica,Tahoma;
+nav a:visited {
+    text-decoration: none;
+    color: #FFAE00;
 }
-.button-guardar{
-	width:120px;
-	height:30px;
-	border-radius:20px;
-	border:0px;
-	background-color:gold;
-	font: 14px normal helvetica,Tahoma;
+
+nav a:hover {
+    background-color: black;
+    color: white;
+}
+
+img {
+    float: left;
+    padding: 5px 16px;
+}
+
+.select {
+    color: grey;
+}
+
+.formulario {
+    position: relative;
+    width: 380px;
+    height: auto;
+    padding-left: 10px;
+    padding-top: 10px;
+    border-radius: 20px;
+    border: solid gold 5px;
+    margin: auto;
+}
+
+.formulario-campo {
+    position: relative;
+    margin: auto;
+    padding-left: 5px;
+    padding-top: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font: 14px normal helvetica, Tahoma;
+}
+
+.obligatorio {
+    color: red;
+    padding-left: 2px
+}
+
+input[type=text],
+[type=email],
+[type=number],
+.select {
+    width: 350px;
+    height: 25px;
+    font: 14px normal helvetica, Tahoma;
+    border-bottom: 2px solid gold;
+    border-width: 0px 0px 2px 0px;
+    padding: auto;
+}
+
+textarea {
+    width: 350px;
+    height: 70px;
+    border: 2px solid gold;
+    font: 14px normal helvetica, Tahoma;
+}
+
+.button-guardar {
+    width: 120px;
+    height: 30px;
+    border-radius: 20px;
+    border: 0px;
+    background-color: gold;
+    font: 14px normal helvetica, Tahoma;
     margin-left: auto;
     margin-right: auto;
 }
-.button-nuevo{
-	position: relative;
-	width:120px;
-	height:30px;
-	border-radius:15px;
-	border:0px;
-	background-color:#586F8C;
-	font: 14px normal helvetica,Tahoma;
-	padding: 8px;
-	color:white;
-    margin: 5px;
-}
-.button-editar{
+
+.button-nuevo {
     position: relative;
-    width:auto;
-    height:30px;
-    border-radius:5px;
-    border:0px;
-	background-color:orange;
-    font: 14px normal helvetica,Tahoma;
+    width: 120px;
+    height: 30px;
+    border-radius: 15px;
+    border: 0px;
+    background-color: #586F8C;
+    font: 14px normal helvetica, Tahoma;
     padding: 8px;
+    color: white;
     margin: 5px;
-}
-.button-apagar{
-    position: relative;
-    width:auto;
-    height:30px;
-    border-radius:5px;
-    border:0px;
-	background-color:lightskyblue;
-    font: 14px normal helvetica,Tahoma;
-    padding: 8px;
-    margin: 5px;
-}
-.div-button{
-	width:100%;
-	height: auto;
-	float: none;
-	margin-left: auto;
-	margin-right: auto;
 }
 
-h1,caption{
-	font: 22px normal Tahoma, helvetica;
+.button-editar {
+    position: relative;
+    width: auto;
+    height: 30px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: orange;
+    font: 14px normal helvetica, Tahoma;
+    padding: 8px;
+    margin: 5px;
 }
-.table-index h1,caption{
+
+.button-apagar {
+    position: relative;
+    width: auto;
+    height: 30px;
+    border-radius: 5px;
+    border: 0px;
+    background-color: lightskyblue;
+    font: 14px normal helvetica, Tahoma;
+    padding: 8px;
+    margin: 5px;
+}
+
+.div-button {
+    width: 100%;
+    height: auto;
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1,
+caption {
+    font: 22px normal Tahoma, helvetica;
+}
+
+.table-index h1,
+caption {
     font: 16px bold Tahoma, helvetica;
     padding-top: 10px;
     padding-bottom: 8px;
     font-weight: bold;
-
 }
+
 .table {
-	position: center;
-	padding:20px;
-	height: 580px;
-	width: auto;
-	font: 24px normal Tahoma, helvetica;
-	overflow: auto;
+    position: center;
+    padding: 20px;
+    height: 580px;
+    width: auto;
+    font: 24px normal Tahoma, helvetica;
+    overflow: auto;
 }
 
-.table-cont-index table{
-	padding:10px;
+.table-cont-index table {
+    padding: 10px;
     height: auto;
-	width: auto;
-	font: 14px normal Tahoma, helvetica;
-	display:inline-list-item;
+    width: auto;
+    font: 14px normal Tahoma, helvetica;
+    display: inline-list-item;
     margin-left: auto;
     background-color: #F2EFC4;
     border: white 5px solid;
 }
 
-.table-index{
+.table-index {
     height: auto;
     width: auto;
     font: 16px normal Tahoma, helvetica;
@@ -175,7 +193,7 @@ h1,caption{
     margin-right: auto;
 }
 
-.index{
+.index {
     margin: 10px;
     width: auto;
     height: auto;
@@ -184,40 +202,39 @@ h1,caption{
     background-color: orange;
 }
 
-table{
-	width:auto;
-	margin-left: auto;
-	margin-right: auto;
-	height: auto;
-	padding:20px;
-	background-color: white;
-	border:gold 4px solid;
-	border-radius: 8px;
-	font: 14px normal helvetica,Tahoma;
+table {
+    width: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: auto;
+    padding: 20px;
+    background-color: white;
+    border: gold 4px solid;
+    border-radius: 8px;
+    font: 14px normal helvetica, Tahoma;
 }
 
-th{
-	width:auto;
-	text-align:left;
-	padding: 0.25em;
-	background-color:#FFAE00;
-	margin-right: 5px;
+th {
+    width: auto;
+    text-align: left;
+    padding: 0.25em;
+    background-color: #FFAE00;
+    margin-right: 5px;
 }
 
-td{
-	background-color:#F2EFC4;
-	padding: 0.30em;
-	margin-right: 5px;
+td {
+    background-color: #F2EFC4;
+    padding: 0.30em;
+    margin-right: 5px;
 }
 
-footer{
-	
-	background-color: white;
-	color: black;
-	left: 0;
-	bottom: 0;
-	text-align: center;
-	width: 100%;
-	box-shadow: 0px -3px 0px gold;
-	font: 14px normal helvetica,Tahoma;
+footer {
+    background-color: white;
+    color: black;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    box-shadow: 0px -3px 0px gold;
+    font: 14px normal helvetica, Tahoma;
 }

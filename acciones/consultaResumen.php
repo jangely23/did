@@ -2,23 +2,6 @@
 
 include "conexion.php";
 
-//muestra el resumen de los proveedores
-echo '<div><table><caption>Proveedores</caption>';
-$estadoProveedor="select estado, count(*) estado from proveedor where estado='activo' union select estado, count(*) estado from proveedor where estado='inactivo'";
-$proveedor=$mysqli->query($estadoProveedor);
-
-while ($row = $proveedor->fetch_row()){
-    $estado=$row['0'];
-    $cantidad=$row['1'];
-
-    if(empty($estado)){
-
-    }else{
-        echo "<tr><td>$estado</td><td>$cantidad</td></tr>";
-    }
-}
-echo "</table></div>";
-
 //muestra el resumen de los did
 echo '<div><table><caption>DID</caption>';
 $estadodid="select estado, count(*) estado from no_did where estado='libre' union  select estado, count(*) estado from no_did where estado='activo' union  select estado, count(*) estado from no_did where estado='suspendido'";

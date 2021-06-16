@@ -2,8 +2,8 @@
 
 $server="localhost";
 $db="did";
-$user="root";
-$pass="";
+$user="admin";
+$pass="ninguna";
 
 $mysqli=new mysqli ($server, $user, $pass, $db);
 
