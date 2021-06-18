@@ -27,7 +27,7 @@ while($row = $didCliente->fetch_assoc()) {
 
 <main>
     <section class="general">
-        <form method="post" action="../acciones/update_did_venta.php" enctype="application/x-www-form-urlencoded" name="did-cliente" id="formulario-did-cliente">
+        <form class="form" method="post" action="../acciones/update_did_venta.php" enctype="application/x-www-form-urlencoded" name="did-cliente" id="formulario-did-cliente">
             <h1>Modificar venta</h1>
 
             <div>

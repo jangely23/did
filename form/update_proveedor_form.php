@@ -31,7 +31,7 @@ while($row = $proveedor->fetch_assoc()){
     ?>
 <main>
     <section class="general">
-        <form method="POST" action="update_proveedor.php" enctype="application/x-www-form-urlencoded" name="proveedores">
+        <form class="form" method="POST" action="update_proveedor.php" enctype="application/x-www-form-urlencoded" name="proveedores">
             <h1>Registro proveedores</h1>
 
             <div>

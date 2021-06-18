@@ -111,7 +111,8 @@ section {
     flex-wrap: wrap;
     justify-content: center safe;
     align-content: center;
-    width: 30%;
+    align-items: center;
+    width: 100%;
     margin: 5px;
 }
 
@@ -133,6 +134,7 @@ section {
     color: rgb(63, 63, 63);
     width: auto;
     order: 2;
+    box-shadow: 0px 0px 3px var(--shadow-bg-color);
 }
 
 
@@ -144,7 +146,6 @@ section {
     background-color: white;
     width: auto;
     flex-basis: min-content;
-    box-shadow: 0px 0px 3px var(--shadow-bg-color);
     margin: 5px;
 }
 
@@ -159,7 +160,8 @@ section {
 
 /* Para las tablas */
 
-caption {
+caption,
+h1 {
     border: 2px black solid;
     font: 18px normal Tahoma, helvetica;
     background-color: var(--main-bg-color);
@@ -214,7 +216,7 @@ td {
     padding: 3px 5px 3px 5px;
     border-radius: 15px;
     border: 0px solid;
-    width: 30%;
+    width: 40%;
     margin: 3px;
 }
 
@@ -223,7 +225,7 @@ td {
     padding: 3px 5px 3px 5px;
     border-radius: 15px;
     border: 0px solid;
-    width: 30%;
+    width: 40%;
     margin: 3px;
     color: #ffffff;
 }
@@ -239,23 +241,36 @@ td {
 }
 
 .button_guardar {
-    background-color: #D1E6FF;
+    background-color: #B0CFF4;
     padding: 8px;
     border-radius: 15px;
+    margin: 3px;
     font: 14px normal helvetica, Tahoma;
     position: relative;
     border: 0px solid;
-    width: 30%;
+    width: auto;
 }
 
 .button_regresar {
     background-color: #D1E6FF;
-    padding: 8px;
+    padding: 10px;
+    margin: 3px;
     border-radius: 15px;
     font: 14px normal helvetica, Tahoma;
     position: relative;
     border: 0px solid;
-    width: 30%;
+    width: auto;
+}
+
+.button_regresar {
+    background-color: #D1E6FF;
+    padding: 10px;
+    margin: 3px;
+    border-radius: 15px;
+    font: 14px normal helvetica, Tahoma;
+    position: relative;
+    border: 0px solid;
+    width: auto;
 }
 
 
@@ -268,11 +283,24 @@ form {
     padding: 10px;
 }
 
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around safe;
+}
+
 form div {
     background-color: white;
-    display: block;
     padding: 5px;
-    width: auto;
+    margin: 15px;
+    width: 100%;
+    align-items: center;
+    flex-direction: row;
+    flex-basis: auto;
+    display: flex;
+    justify-content: space-around safe;
 }
 
 form span {
@@ -281,36 +309,31 @@ form span {
 }
 
 input[type=text],
-[type=email],
-[type=number],
+input[type=email],
+input[type=number],
 select {
-    width: 30%;
-    height: 25px;
     font: 14px normal helvetica, Tahoma;
     background-color: rgba(1, 38, 53, 0.027);
-    border-bottom: 2px solid var(--main-bg-color);
-    border-width: 0px 0px 2px 0px;
-    padding: auto;
-}
-
-select {
-    -moz-appearance: none;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+    border: 1px solid var(--main-bg-color);
+    align-items: center;
 }
 
 textarea {
-    width: 30%;
-    height: 10%;
     font: 14px normal helvetica, Tahoma;
+    height: 40px;
     background-color: rgba(1, 38, 53, 0.027);
-    border-bottom: 2px solid var(--main-bg-color);
-    border-width: 0px 0px 2px 0px;
+    border: 2px solid var(--main-bg-color);
+    padding: 5px;
+    margin: 5px;
 }
 
 label {
-    position: relative;
-    width: 10%;
-    height: 25px;
     font: 15px normal helvetica, Tahoma;
+    align-items: flex-start;
+    width: 50%;
 }
 
 
@@ -324,5 +347,5 @@ footer {
     width: 100%;
     background-color: #ffffff;
     font-size: small;
-    border: 2px solid rgba(1, 38, 53, 0.2)
+    border: 2px solid var(--main-bg-color);
 }

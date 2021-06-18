@@ -2,7 +2,7 @@
 include "conexion.php";
 
 //muestra detalle de venta.
-echo '<div><table><caption>Ventas realizadas</caption><tr><th>Cliente</th><th>Numero</th><th>Canales</th><th>Distribuidor</th><th>Estado DID</th><th>Proveedor DID</th><th>Acciones</th></tr>';
+echo '<div><table><caption>Ventas realizadas</caption><tr><th>Cliente</th><th>Numero</th><th>Canales</th><th>Distribuidor</th><th>Estado DID</th><th>Proveedor DID</th><th colspan="2">Acciones</th></tr>';
 $estadoVenta="select t1.id_did_cliente, t1.maxcall, t2.nombre, t2.distribuidor, t3.numero, t3.estado, t4.nombre from did_cliente as t1 inner join cliente as t2 on t1.id_cliente=t2.id_cliente inner join no_did as t3 on t1.id_did=t3.id_did inner join proveedor as t4 on t3.id_proveedor=t4.id_proveedor order by t2.nombre asc";
 $venta=$mysqli->query($estadoVenta);
 

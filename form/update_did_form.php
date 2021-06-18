@@ -30,7 +30,7 @@ while($row = $did->fetch_assoc()) {
     ?>
 <main>
     <section class="general">
-        <form method="POST" action="update_did.php" enctype="application/x-www-form-urlencoded" name="did" id="formulario-did">
+        <form class="form" method="POST" action="update_did.php" enctype="application/x-www-form-urlencoded" name="did" id="formulario-did">
             <h1>Modificar numeros DID</h1>
 
             <div>

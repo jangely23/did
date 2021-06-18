@@ -11,7 +11,7 @@
     ?>
 <main>
     <section class="general">
-        <form method="post" action="../acciones/insert_did_cliente.php" enctype="application/x-www-form-urlencoded" name="did-cliente" id="formulario-did-cliente">
+        <form class="form" method="post" action="../acciones/insert_did_cliente.php" enctype="application/x-www-form-urlencoded" name="did-cliente" id="formulario-did-cliente">
         <h1>Nueva venta</h1>
 
         <div>

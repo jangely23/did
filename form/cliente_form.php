@@ -11,7 +11,7 @@
     ?>
 <main>
     <section class="general">
-        <form method="POST" action="../acciones/insert_cliente.php" enctype="application/x-www-form-urlencoded" name="clientes">
+        <form class="form" method="POST" action="../acciones/insert_cliente.php" enctype="application/x-www-form-urlencoded" name="clientes">
             <h1>Registro clientes</h1>
 
             <div>
